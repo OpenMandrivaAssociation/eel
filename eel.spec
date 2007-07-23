@@ -9,12 +9,14 @@
 Name:		eel
 Summary:	Eazel Extensions Library
 Version:	2.19.5
-Release:	%mkrel 1
+Release:	%mkrel 2
 License: 	LGPL/GPL
 Group:		System/Libraries
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 2.10.1-3mdk fix load of KDE icons
 Patch1:		eel-2.10.1-kdeicons.patch
+# (pt) GNOME bug #455949
+Patch2:		eel-do_not_crash_on_missing_exec.patch
 
 URL: 		http://www.gnome.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
@@ -52,6 +54,7 @@ files to allow you to develop with Eel.
 %prep
 %setup -q
 %patch1 -p1 -b .kdeicons
+%patch2 -p0 -b .exec
 
 %build
 
