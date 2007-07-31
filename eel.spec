@@ -23,6 +23,7 @@ BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
 BuildRequires:	gnome-menus-devel >= %{req_gnome_menus_version}
 BuildRequires:	perl-XML-Parser expat-devel
+BuildRequires:	libgcrypt-devel
 
 %description
 Eazel Extensions Library
