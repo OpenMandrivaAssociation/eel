@@ -1,6 +1,7 @@
 %define lib_major 2
 %define api_version 2
-%define lib_name %mklibname %{name} %{api_version} %{lib_major}
+%define libname %mklibname %{name} %{api_version} %{lib_major}
+%define libnamedev %mklibname -d %{name} %{api_version}
 
 %define req_gail_version 0.17
 %define req_libglade_version 2.0.0
@@ -9,7 +10,7 @@
 Name:		eel
 Summary:	Eazel Extensions Library
 Version:	2.19.6
-Release:	%mkrel 1
+Release:	%mkrel 2
 License: 	LGPL/GPL
 Group:		System/Libraries
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
@@ -23,29 +24,29 @@ BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
 BuildRequires:	gnome-menus-devel >= %{req_gnome_menus_version}
 BuildRequires:	perl-XML-Parser expat-devel
-BuildRequires:	libgcrypt-devel
 
 %description
 Eazel Extensions Library
 
-%package -n	%{lib_name}
+%package -n	%{libname}
 Summary:	Eazel Extensions shared Libraries
 Group:		%{group}
 Requires:	%{name} >= %{version}-%{release}
 
-%description -n	%{lib_name}
+%description -n	%{libname}
 Eazel Extensions shared libraries
 
-%package -n	%{lib_name}-devel
+%package -n	%{libnamedev}
 Summary:	Libraries and include files for developing with Eel
 Group:		Development/C
-Requires:	%{lib_name} = %{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
 Provides:	lib%{name}%{api_version}-devel = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	lib%{name}-devel = %{version}-%{release}
 Obsoletes:	%{name}-devel
+Obsoletes: %mklibname -d %{name} 2 2
 
-%description -n	%{lib_name}-devel
+%description -n	%{libnamedev}
 This package provides the necessary development libraries and include
 files to allow you to develop with Eel.
 
@@ -71,20 +72,20 @@ rm -f %_libdir/debug%_libdir/?
 %clean
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig -n %{lib_name}
+%post -p /sbin/ldconfig -n %{libname}
 
-%postun -p /sbin/ldconfig -n %{lib_name}
+%postun -p /sbin/ldconfig -n %{libname}
 
 %files -f %{name}-2.0.lang
 %defattr(-, root, root)
 %doc AUTHORS COPYING COPYING.LIB NEWS README
 
-%files -n %{lib_name}
+%files -n %{libname}
 %defattr(-, root, root)
-%{_libdir}/*.so.*
+%{_libdir}/libeel-%{api_version}.so.%{lib_major}*
 
 
-%files -n %{lib_name}-devel
+%files -n %{libnamedev}
 %defattr(-, root, root)
 %doc ChangeLog
 %{_libdir}/*.so
