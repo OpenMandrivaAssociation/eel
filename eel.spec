@@ -9,8 +9,8 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.19.6
-Release:	%mkrel 2
+Version:	2.19.90
+Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
