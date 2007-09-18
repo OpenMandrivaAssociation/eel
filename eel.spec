@@ -9,7 +9,7 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.19.90
+Version:	2.20.0
 Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
