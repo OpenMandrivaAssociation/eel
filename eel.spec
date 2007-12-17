@@ -18,7 +18,6 @@ Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 Patch1:		eel-2.10.1-kdeicons.patch
 
 URL: 		http://www.gnome.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	gnome-desktop-devel
 BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
