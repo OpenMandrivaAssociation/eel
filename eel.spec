@@ -17,8 +17,8 @@ Group:		System/Libraries
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) 2.10.1-3mdk fix load of KDE icons
 Patch1:		eel-2.10.1-kdeicons.patch
-# (fc) 2.20.0-2mdv add support for new gnome-bg code (Fedora)
-Patch2:		eel2-2.18.0.1-gnome-bg.patch
+# (fc) 2.20.0-2mdv add support for new gnome-bg code (SVN)
+Patch2:		eel-gnome-bg.patch
 
 URL: 		http://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
@@ -57,6 +57,9 @@ files to allow you to develop with Eel.
 %setup -q
 %patch1 -p1 -b .kdeicons
 %patch2 -p1 -b .gnome-bg
+
+#needed by patch2
+autoreconf
 
 %build
 
