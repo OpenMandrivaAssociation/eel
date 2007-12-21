@@ -10,21 +10,18 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.20.0
-Release:	%mkrel 2
+Version:	2.21.1
+Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-# (fc) 2.10.1-3mdk fix load of KDE icons
-Patch1:		eel-2.10.1-kdeicons.patch
-# (fc) 2.20.0-2mdv add support for new gnome-bg code (SVN)
-Patch2:		eel-gnome-bg.patch
 
 URL: 		http://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
 BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
 BuildRequires:	gnome-menus-devel >= %{req_gnome_menus_version}
+BuildRequires:	glib2-devel >= 2.15.0
 BuildRequires:	perl-XML-Parser expat-devel
 BuildRequires:  intltool
 
@@ -56,11 +53,6 @@ files to allow you to develop with Eel.
 
 %prep
 %setup -q
-%patch1 -p1 -b .kdeicons
-%patch2 -p1 -b .gnome-bg
-
-#needed by patch2
-autoreconf
 
 %build
 
