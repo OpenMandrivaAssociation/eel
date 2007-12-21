@@ -5,7 +5,6 @@
 
 %define req_gail_version 0.17
 %define req_libglade_version 2.0.0
-%define req_gnome_menus_version 2.13
 %define req_gnomedesktop_version 2.21.4
 
 Name:		eel
@@ -20,7 +19,6 @@ URL: 		http://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
 BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
-BuildRequires:	gnome-menus-devel >= %{req_gnome_menus_version}
 BuildRequires:	glib2-devel >= 2.15.0
 BuildRequires:	perl-XML-Parser expat-devel
 BuildRequires:  intltool
