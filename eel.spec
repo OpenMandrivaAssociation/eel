@@ -9,7 +9,7 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.21.1
+Version:	2.21.5
 Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
@@ -19,7 +19,7 @@ URL: 		http://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
 BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
-BuildRequires:	glib2-devel >= 2.15.0
+BuildRequires:	glib2-devel >= 2.15.2
 BuildRequires:	perl-XML-Parser expat-devel
 BuildRequires:  intltool
 
