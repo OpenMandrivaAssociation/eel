@@ -13,6 +13,7 @@ Version:	2.21.91
 Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 
 URL: 		http://www.gnome.org/
