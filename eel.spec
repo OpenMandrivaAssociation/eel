@@ -9,14 +9,12 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.22.0
-Release:	%mkrel 2
+Version:	2.22.1
+Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-# (fc) 2.22.0-2mdv monitor backgrounds for change (SVN) (GNOME bug #106613)
-Patch0:		eel-2.22.0-monitorbackground.patch
 
 URL: 		http://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
@@ -54,7 +52,6 @@ files to allow you to develop with Eel.
 
 %prep
 %setup -q
-%patch0 -p1 -b .monitorbackground
 
 %build
 
