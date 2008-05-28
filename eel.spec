@@ -9,7 +9,7 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.22.1
+Version:	2.22.2
 Release:	%mkrel 1
 License: 	LGPL/GPL
 Group:		System/Libraries
@@ -57,7 +57,7 @@ files to allow you to develop with Eel.
 
 %configure2_5x
 
-%make
+%make LIBS=-lm
 
 %install
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
