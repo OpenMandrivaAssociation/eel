@@ -5,13 +5,13 @@
 
 %define req_gail_version 0.17
 %define req_libglade_version 2.0.0
-%define req_gnomedesktop_version 2.21.4
+%define req_gnomedesktop_version 2.23.3
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.22.2
+Version:	2.23.4
 Release:	%mkrel 1
-License: 	LGPL/GPL
+License: 	LGPLv2+
 Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
@@ -20,6 +20,7 @@ URL: 		http://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
 BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
+BuildRequires:	libgnome2-devel >= 2.23.0
 BuildRequires:	glib2-devel >= 2.15.2
 BuildRequires:	perl-XML-Parser expat-devel
 BuildRequires:  intltool
