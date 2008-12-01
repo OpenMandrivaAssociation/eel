@@ -9,8 +9,8 @@
 
 Name:		eel
 Summary:	Eazel Extensions Library
-Version:	2.24.1
-Release:	%mkrel 3
+Version:	2.25.1
+Release:	%mkrel 1
 License: 	LGPLv2+
 Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
