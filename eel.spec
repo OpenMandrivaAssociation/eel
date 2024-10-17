@@ -16,7 +16,7 @@ Group:		System/Libraries
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 
-URL: 		http://www.gnome.org/
+URL: 		https://www.gnome.org/
 BuildRequires:	gnome-desktop-devel >= %{req_gnomedesktop_version}
 BuildRequires:	libgail-devel >= %{req_gail_version}
 BuildRequires:	libglade2.0-devel >= %{req_libglade_version}
